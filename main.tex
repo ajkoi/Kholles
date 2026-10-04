@@ -1,0 +1,66 @@
+\documentclass{article}
+\input{preamble.tex}
+\title{Sujet de Kholles de maths - Sup}
+\author{YIOU Félix}
+
+\begin{document}
+\maketitle
+\section{Delabrouille - 2 octobre}
+\begin{exercise}
+	
+Montrer que $n$ est premier si et seulement si $\forall k \in \llbracket 1~;~n-1\rrbracket$, $n\mid\binom{n}{k}$ 
+\end{exercise}
+
+\begin{solution}
+	
+Sens $\Rightarrow$ plutôt facile, bien penser a dire que n est premier pour pouvoir le factoriser
+
+Sens $\Leftarrow$:
+Faire par l'absurde en supposant que $n$ est composé puis voir que $n\nmid\binom{n}{k}$
+
+\end{solution}
+
+
+
+\begin{exercise}{}{}
+	
+Calculer:
+\[\sum_{\substack{k=0\\k\equiv0 \ [3]}}^n \binom{n}{k}\]
+\end{exercise}
+
+
+\begin{solution}
+	
+\[S_1 = (1+1)^n = 2^n = \sum_{k=0}^n\binom{n}{k}\]
+\[S_j = (1+j)^n = e^{\frac{ni\pi}{3}} = \sum_{k=0}^n\binom{n}{k} j^k\]
+\[S_{\bar{j}} = (1+\bar{j})^n = e^{-\frac{ni\pi}{3}} = \sum_{k=0}^n\binom{n}{k} \bar{j}^k\]
+
+\[S_1+S_j+S_{\bar{j}} = \sum_{k=0}^n(1+j+\bar{j})\binom{n}{k}\]
+
+On remarque que si $k\equiv0 \ [2]$, $ (1+j+\bar{j}) = 3$, sinon $ (1+j+\bar{j}) = 0$
+on a donc:
+
+\[S_1+S_j+S_{\bar{j}} = 3\sum_{\substack{k=0\\k\equiv0 \ [3]}}^n \binom{n}{k}\]
+
+Et donc:
+\[\sum_{\substack{k=0\\k\equiv0 \ [3]}}^n \binom{n}{k} = \frac{2^n+e^{\frac{ni\pi}{3}}+e^{-\frac{ni\pi}{3}}}{3}\]
+
+
+\end{solution}
+
+\begin{exercise}
+	
+Calculer la somme suivante: $$\sum_{1\leq i,j\leq n} \lvert i - j \rvert$$
+\end{exercise}
+
+\subsection{Exo4}
+Calculer:
+\[\cos\left(\frac{\pi}{7}\right)\cos\left(\frac{2\pi}{7}\right)\cos\left(\frac{3\pi}{7}\right)\]
+
+\begin{solution}
+	
+Multiplier par $\sin\left(\frac{\pi}{7}\right)$ et remarquer que $\sin\left(\frac{3\pi}{7}\right) = \sin\left(\frac{4\pi}{7}\right)$
+
+
+\end{solution}
+\end{document}

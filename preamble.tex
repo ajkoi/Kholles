@@ -1,0 +1,136 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Premiers packages %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Package de gestion des caractères.
+\usepackage[T1]{fontenc}
+
+% Package pour avoir les bons espacements, dépendamment de la langue utilisée.
+
+\usepackage[french]{babel}
+%\usepackage[british]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Modification de la mise en page %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Package de gestion des interlignes.
+\usepackage{setspace}
+
+% Package de gestion des figures. 
+\usepackage{subfigure}
+
+% Package de gestion des images et des légendes.
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage[font=small,labelfont=bf]{caption}
+
+% Package de gestion des tableaux.
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+% Package de gestion des listes.
+\usepackage{enumitem}
+
+% Package de gestion du titre.
+\usepackage{titling}
+\usepackage{hyperref}
+% code
+\usepackage{listings}
+
+% Mise en page générale :
+\setlength{\paperwidth}{21cm}		% Largeur du papier
+\setlength{\paperheight}{29.7cm}	% Hauteur du papier
+
+% En haut :
+\setlength{\hoffset}{-0.54cm}		% Marge d'en haut = 1 in + \hoffset
+\setlength{\topmargin}{0cm}			% Marge de haut de page
+\setlength{\headheight}{0cm} 		% Hauteur du haut de page
+\setlength{\headsep}{0cm} 			% Entre le haut de page et le texte
+
+% En bas : 
+\setlength{\footskip}{1cm} 			% Bas de page + séparation
+
+% À droite, à gauche : 
+\setlength{\voffset}{-0.54cm} 		% Marge de gauche = 1 in + \voffset
+\setlength{\oddsidemargin}{0cm} 	% Marge gauche EN PLUS sur pages impaires
+\setlength{\evensidemargin}{0cm} 	% Marge droite EN PLUS sur pages paires
+
+% Zone de texte :
+\setlength{\textheight}{25.7cm} 	% Hauteur de la zone de texte (25cm)
+\setlength{\textwidth}{17cm} 		% Largeur de la zone de texte
+
+% Permet de commencer la numérotation à 1.
+\renewcommand{\thesection}{\arabic{section}}
+
+% Interlignes à 1,5 plutôt que 1.
+\renewcommand{\arraystretch}{1.5}
+\onehalfspacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Mathématiques %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Package général de gestion des maths.
+\usepackage{amsmath}
+% Packages de gestion des symboles des maths.
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{mathabx}
+% Package de gestion des théorèmes.
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Théorème}
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition}[theorem]{Définition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remarque}
+\newtheorem{example}[theorem]{Exemple}
+
+% Pour l'Expo d'ES
+\newtheorem{image}{Image}[subsection]
+
+
+
+\newtheoremstyle{exo}
+  {\topsep}{\topsep}   % space above, below
+  {}                   % body font: empty = upright
+  {}                   % indent
+  {\bfseries}{.}{.5em}{}   % heading font, punctuation, space after heading, heading spec
+\theoremstyle{exo}
+\newtheorem{exercise}{Exercice}[section]
+\newtheorem*{solution}{Solution}
+
+\theoremstyle{plain}
+% Package de gestion des figures géométriques en maths.
+\usepackage{tikz} 
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+\lstset{style=mystyle}
+\newcommand{\lfa}{\Leftrightarrow}
