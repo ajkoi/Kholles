@@ -1,12 +1,39 @@
 \documentclass{article}
 \input{preamble.tex}
-\title{Compilation de sujets de Kholles de maths - Sup}
+\title{Compilation de sujets de Kholles de maths \textendash~Sup}
 \author{ }
 \date{ }
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{Sujets de kholles} 
+\fancyhead[R]{\leftmark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\abs}[1]{\lvert#1 \rvert}
 \begin{document}
 \maketitle
 \tableofcontents
+\section{Applications}
+\begin{exercise}[Une bijection de $\R \to {]-1, 1[}$\\]
+
+
+Soit $f:\R \to \R$, $f(x) = \frac{x}{1+\abs{x}}$
+	
+\begin{enumerate}
+	
+	\item Montrer que $f$ est bijective.
+	\item Montrer que $f(\R) \subset ]-1,1[$.
+	\item Soit $y \in]-1,1[$. Résoudre $f(x) = y$. En déduire que l'application $g:\R \mapsto ]-1,1[$ indute par $f$ est bijective et expliciter $g^{-1}$.
+	\item Déterminer $f^{-1}\left(\left[0, \frac{3}{2}\right]\right)$ et $f\left(\left]-\infty,0\right]\right)$
+	
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Images directes et réciproques\\]
+Soit $f:E\to F$, $A,B\subset E$ et $C,D \subset F$	 % derniere modif ici Exo planche 1
+\end{exercise}
 \section{Somme et produits}
 \begin{exercise}
 	
@@ -16,17 +43,16 @@ Calculer:
 
 
 \begin{solution}
-	
-\[S_1 = (1+1)^n = 2^n = \sum_{k=0}^n\binom{n}{k}\]
-\[S_j = (1+j)^n = e^{\frac{ni\pi}{3}} = \sum_{k=0}^n\binom{n}{k} j^k\]
-\[S_{\bar{j}} = (1+\bar{j})^n = e^{-\frac{ni\pi}{3}} = \sum_{k=0}^n\binom{n}{k} \bar{j}^k\]
+\[S_1 = {(1+1)}^n = 2^n = \sum_{k=0}^n\binom{n}{k}\]
+\[S_j = {(1+j)}^n = e^{\frac{ni\pi}{3}} = \sum_{k=0}^n\binom{n}{k} j^k\]
+\[S_{\bar{\jmath}} = {(1+\bar{\jmath})}^n = e^{-\frac{ni\pi}{3}} = \sum_{k=0}^n\binom{n}{k} \bar{\jmath}^k\]
 
-\[S_1+S_j+S_{\bar{j}} = \sum_{k=0}^n(1+j+\bar{j})\binom{n}{k}\]
+\[S_1+S_j+S_{\bar{\jmath}} = \sum_{k=0}^n(1+j+\bar{\jmath})\binom{n}{k}\]
 
-On remarque que si $k\equiv0 \ [2]$, $ (1+j+\bar{j}) = 3$, sinon $ (1+j+\bar{j}) = 0$
+On remarque que si $k\equiv0 \ [2]$, $ (1+j+\bar{\jmath}) = 3$, sinon $ (1+j+\bar{\jmath}) = 0$
 on a donc:
 
-\[S_1+S_j+S_{\bar{j}} = 3\sum_{\substack{k=0\\k\equiv0 \ [3]}}^n \binom{n}{k}\]
+\[S_1+S_j+S_{\bar{\jmath}} = 3\sum_{\substack{k=0\\k\equiv0 \ [3]}}^n \binom{n}{k}\]
 
 Et donc:
 \[\sum_{\substack{k=0\\k\equiv0 \ [3]}}^n \binom{n}{k} = \frac{2^n+e^{\frac{ni\pi}{3}}+e^{-\frac{ni\pi}{3}}}{3}\]
@@ -37,7 +63,7 @@ Et donc:
 
 \begin{exercise}
 	
-Calculer la somme suivante: $$\sum_{1\leq i,j\leq n} \lvert i - j \rvert$$
+Calculer la somme suivante: \[\sum_{1\leq i,j\leq n} \lvert i - j \rvert\]
 \end{exercise}
 
 % fin somme
@@ -69,7 +95,6 @@ Calculer:
 \begin{solution}
 	
 Multiplier par $\sin\left(\frac{\pi}{7}\right)$ et remarquer que $\sin\left(\frac{3\pi}{7}\right) = \sin\left(\frac{4\pi}{7}\right)$
-
 
 \end{solution}
 \end{document}

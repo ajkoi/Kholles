@@ -40,27 +40,39 @@
 % code
 \usepackage{listings}
 
-% Mise en page générale :
-\setlength{\paperwidth}{21cm}		% Largeur du papier
-\setlength{\paperheight}{29.7cm}	% Hauteur du papier
+\usepackage[
+  paperwidth=21cm,
+  paperheight=29.7cm,
+  left=2cm,
+  right=2cm,
+  top=2cm,
+  bottom=2cm,
+  headheight=14pt,
+  headsep=0.5cm,
+  includehead,
+  footskip=1cm
+]{geometry}
+% % Mise en page générale :
+% \setlength{\paperwidth}{21cm}		% Largeur du papier
+% \setlength{\paperheight}{29.7cm}	% Hauteur du papier
 
-% En haut :
-\setlength{\hoffset}{-0.54cm}		% Marge d'en haut = 1 in + \hoffset
-\setlength{\topmargin}{0cm}			% Marge de haut de page
-\setlength{\headheight}{0cm} 		% Hauteur du haut de page
-\setlength{\headsep}{0cm} 			% Entre le haut de page et le texte
+% % En haut :
+% \setlength{\hoffset}{-0.54cm}		% Marge d'en haut = 1 in + \hoffset
+% \setlength{\topmargin}{0cm}			% Marge de haut de page
+% \setlength{\headheight}{0cm} 		% Hauteur du haut de page
+% \setlength{\headsep}{0cm} 			% Entre le haut de page et le texte
 
-% En bas : 
-\setlength{\footskip}{1cm} 			% Bas de page + séparation
+% % En bas : 
+% \setlength{\footskip}{1cm} 			% Bas de page + séparation
 
-% À droite, à gauche : 
-\setlength{\voffset}{-0.54cm} 		% Marge de gauche = 1 in + \voffset
-\setlength{\oddsidemargin}{0cm} 	% Marge gauche EN PLUS sur pages impaires
-\setlength{\evensidemargin}{0cm} 	% Marge droite EN PLUS sur pages paires
+% % À droite, à gauche : 
+% \setlength{\voffset}{-0.54cm} 		% Marge de gauche = 1 in + \voffset
+% \setlength{\oddsidemargin}{0cm} 	% Marge gauche EN PLUS sur pages impaires
+% \setlength{\evensidemargin}{0cm} 	% Marge droite EN PLUS sur pages paires
 
-% Zone de texte :
-\setlength{\textheight}{25.7cm} 	% Hauteur de la zone de texte (25cm)
-\setlength{\textwidth}{17cm} 		% Largeur de la zone de texte
+% % Zone de texte :
+% \setlength{\textheight}{25.7cm} 	% Hauteur de la zone de texte (25cm)
+% \setlength{\textwidth}{17cm} 		% Largeur de la zone de texte
 
 % Permet de commencer la numérotation à 1.
 \renewcommand{\thesection}{\arabic{section}}
@@ -99,7 +111,18 @@
   {\topsep}{\topsep}   % space above, below
   {}                   % body font: empty = upright
   {}                   % indent
-  {\bfseries}{.}{.5em}{}   % heading font, punctuation, space after heading, heading spec
+  {\bfseries}{.}{.5em}{\thmname{#1}\thmnumber{ #2}\thmnote{ --- \normalfont\itshape #3}}   % heading font, punctuation, space after heading, heading spec
+% 
+
+% \newtheoremstyle{exo}
+%   {\topsep}{\topsep}
+%   {\normalfont}                 % upright body
+%   {0pt}
+%   {\bfseries}                   % heading font ("Exercice 2")
+%   {}                            % no punctuation after the heading
+%   {}%\newline}                    % body starts on the next line
+%   % {}
+%   {\thmname{#1}\thmnumber{ #2}\thmnote{ --- \normalfont\itshape #3}}
 \theoremstyle{exo}
 \newtheorem{exercise}{Exercice}[section]
 \newtheorem*{solution}{Solution}
