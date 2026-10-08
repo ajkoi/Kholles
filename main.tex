@@ -15,7 +15,8 @@
 \begin{document}
 \maketitle
 \tableofcontents
-\section{Applications}
+\section{Applications et fonctions}
+\subsection{bijections, inections etc etc}
 \begin{exercise}[Une bijection de $\R \to {]-1, 1[}$\\]
 
 
@@ -39,7 +40,7 @@ Soit $f:E\to F$, $A,B\subset E$ et $C,D \subset F$	 % derniere modif ici Exo pla
 	\item Réciproquement, on suppose que $f(A\cap B) = f(A)\cap f(B)$ pour tous $A,B\subset E$. Montrer que $f$ est injective (prendre $A=\{x\}$, $B=\{x'\}$
 	\item Montrer que $f(f^{-1}(C)) = C\cap f(E)$ et que $A\subset f^{-1}(f(A))$.
 \end{enumerate}
-
+\end{exercise}
 \begin{exercise}[Propriétés de relations binaires\\]
 On considère sur $\R$ les relation $x\mathcal{R}_1y \lfa \abs{x-y}\leq1$, $x\mathcal{R}_2y \lfa x-y \in \mathbb{Q}$, $x\mathcal{R}_3y \lfa \abs{x}\leq\abs{y}$.
 \begin{enumerate}
@@ -51,7 +52,30 @@ On considère sur $\R$ les relation $x\mathcal{R}_1y \lfa \abs{x-y}\leq1$, $x\ma
 
 	
 \end{exercise}
+
+\subsection{Fonctions usuelles}
+
+\begin{exercise}
+Soient $a, b \in \R^*_+, a\leq b$
+Montrer que:
+\[\ln \left( 1 + \frac{a}{b}\right)\ln\left(1+\frac{b}{a}\right) \leq \ln {(2)}^2\]
+	
 \end{exercise}
+\begin{solution}
+Il faut poser la fonction $f:x\mapsto \frac{\ln(1+ax)}{\ln(1+bx)}$, puis étudier ses variations (elle est croissante) puis utiliser la croissance pour avoir $f\left(\frac 1 a\right)\geq f\left(\frac 1 b\right)$ puis déduire ce qu'il faut pour tuer l'exercice.
+	
+\end{solution}
+
+\subsection{Equations fonctionnelles}
+\begin{exercise}
+	Trouver les $f\in\R^{\R^*}$ qui vérifient l'équation fonctionnelle:
+	\[f(x)+3f\left(\frac 1 x\right) = x^2\]
+\end{exercise}
+\begin{solution}
+Raisonnement par analyse-synthese.\\
+Remplacer $x$ par $\frac 1 x$ puis subsitituer ce dont on a besoin et conclure (bien penser à faire la synthèse)
+	
+\end{solution}
 \section{Somme et produits}
 \begin{exercise}
 	
@@ -115,4 +139,5 @@ Calculer:
 Multiplier par $\sin\left(\frac{\pi}{7}\right)$ et remarquer que $\sin\left(\frac{3\pi}{7}\right) = \sin\left(\frac{4\pi}{7}\right)$
 
 \end{solution}
+
 \end{document}
