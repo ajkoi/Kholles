@@ -104,7 +104,7 @@
 
 % fin somme
 \section{Arithmétique et coefficients binomiaux}
-
+Il n'y aura surement qu'un exercice ici, il est assez inclassable. 
 \begin{exercise}
 
   Montrer que $n$ est premier si et seulement si $\forall k \in \llbracket 1~;~n-1\rrbracket$, $n\mid\binom{n}{k}$
@@ -120,6 +120,9 @@
 \end{solution}
 
 \section{Trigonométrie}
+\subsection{Calcul de valeur trigonométrique }%
+\label{sub:Calcul de valeur trigonométrique }
+
 \begin{exercise}
 
   Calculer:
@@ -131,6 +134,15 @@
   Multiplier par $\sin\left(\frac{\pi}{7}\right)$ et remarquer que $\sin\left(\frac{3\pi}{7}\right) = \sin\left(\frac{4\pi}{7}\right)$
 
 \end{solution}
+
+\begin{exercise}
+    calculer $\cos \left( \frac{\pi}{10} \right) $
+\end{exercise}
+\begin{solution}
+    D'abord, il faut dé linéariser $\cos 5x$ puis évaluer l'expression obtenue en $\frac{\pi}{10}$ et l'on obtient un polynôme de degré 4 que l'on peut réécrire en un polynôme de degré 2 que l'on peut aisément résoudre.
+\end{solution}
+\subsection{Avec des fonctions trigonométrique à étudier}%
+\label{sub:Avec des fonctions trigonométrique à étudier}
 
 \begin{exercise}
 
@@ -153,4 +165,22 @@
 \end{itemize}
 \end{solution}
 
-  \end{document}
+
+\section{Nombres complexes}%
+\label{sec:Nombres complexes}
+
+\begin{exercise}
+    Déterminer $\sup_{\lvert z \lvert \leq 1} \lvert z^3+2iz\lvert$
+\end{exercise}
+\begin{solution}
+    \begin{itemize}
+        \item $\forall z \in \mathbb{C}$ tel que $\lvert z \lvert \leq 1$:
+    \begin{align*}
+        \lvert z^3+2iz \lvert &\leq \lvert z^3 \lvert +\lvert 2iz \lvert \\
+                              &\leq \lvert z^3 \lvert +2 \lvert z \lvert 
+    \end{align*}
+    donc $\lvert z^3+2iz \lvert \leq 3$ par inégalité triangulaire
+\item On cherche si on peut obtenir une égalité au lieu d'une inégalité, on peut intuiter assez aisément le maximum, et on a bien que pour ce nombre $\lvert z^3+2iz \lvert =3$
+    \end{itemize}
+\end{solution}
+\end{document}
