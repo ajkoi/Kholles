@@ -14,6 +14,11 @@
 \newcommand{\abs}[1]{\lvert#1 \rvert}
 \begin{document}
 \maketitle
+Un petit florilège des exercices de colle qui sont tombés en khôlle de mathématiques en première année de CPGE MPSI, il y à un peu de tout et de différents niveaux (qui ne sont pas encore indiqués pour l'instant, peut être un jour...)
+
+Parfois, la solution des exercices n'est pas mise, en général parce que l'exercice était assez simple (ou que j'ai la flemme)
+
+
 \tableofcontents
 \section{Applications et fonctions}
 \subsection{Bijections, injections etc etc}
@@ -183,4 +188,67 @@ Il n'y aura surement qu'un exercice ici, il est assez inclassable.
 \item On cherche si on peut obtenir une égalité au lieu d'une inégalité, on peut intuiter assez aisément le maximum, et on a bien que pour ce nombre $\lvert z^3+2iz \lvert =3$
     \end{itemize}
 \end{solution}
+
+\section{Suites}%
+\label{sec:Suites}
+\subsection{Limites de suites}%
+\begin{exercise}
+    Étudier la suite définie par: \[
+        u_0 \in \mathbb{R}_+ \land \forall n \in~\mathbb{N} u_{n+1} = 1+\frac{1}{4}u_n^2
+    \]
+\end{exercise}
+
+\begin{exercise}
+    Soit $(u_n=$ une suite décroissante de limite nulle. On pose: \[
+        S_n = \sum_{k=1}^n (-1)^k u_k
+    \]
+    Étudier le comportement de la suite $(S_n)$.
+\end{exercise}
+\begin{solution}
+    On pourra s'intéresser à $(S_{2n})$ et $(S_{2n+1})$. (On verra que ces deux suites sont adjacentes et après on est heureux :D).
+\end{solution}
+\label{sub:Limites de suites}
+\begin{exercise}
+    Soit $(n_n)_{n\in \mathbb{N}}$ une suite réelle bornée vérifiant: \[
+        \forall n \in~\mathbb{N}^* a_{n+1} \leq \frac{1}{3}a_n + \frac{2}{3} a_{n-1} 
+    \]
+
+    \begin{enumerate}
+        \item Montrer que $\left( a_{n+1} + \frac{2}{3}a_n \right) _{n \in~\mathbb{N}}$ est convergente. On note $\lambda$ sa limite.
+        \item Soit $\epsilon \ge 0$. Pour $n \in~\mathbb{N}$, on pose $u_n = a_n - \frac{3}{5}\lambda$. Montrer qu'il existe $n_0 \in \mathbb{N}$ tel que l'on ait $\lvert u_{n+1} \lvert \frac{2}{3}\lvert u_n \lvert + \epsilon$ pour tout $n\geq n_0$.
+        \item Étudier la convergence de la suite $(a_n)_{n\in\N}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    D'après la formule de Viete: \[
+        \sqrt{2+\sqrt{2+\sqrt{2+{\sqrt{2+\sqrt{\cdots}}}}}} = 2
+    \]
+    \begin{enumerate}
+        \item Réécrire cette formule et montrer avec la notion de suite.
+        \item Pour $\alpha \in \mathbb{R}^*_+$, que vaut $\sqrt{\alpha+\sqrt{\alpha+\sqrt{\alpha+{\sqrt{\alpha+\sqrt{\cdots}}}}}}$ ?
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    On pose pour tout entier naturel $n$ : $u_n = \sqrt{n} - \lfloor \sqrt{n} \rfloor$
+    \begin{enumerate}
+        \item Étudier $\lim u_{n^2+n}$ et en déduire que $(u_n)$ ne converge pas.
+    \item Soient $a$ et $b$ deux entiers naturels $b\neq 0 \land a \le b$. Démontrer que $lim_{n^2b^2+2an} = \frac{a}{b}$
+    \item Démontrer que tout élément de $\left[ O;1 \right]$ est limite d'une suite extraite de $(u_n)$.
+    \end{enumerate}
+\end{exercise}
+
+\section{Ensembles}%
+\label{sec:Ensembles}
+
+\begin{exercise}
+    
+    \begin{enumerate}
+        \item Soit $A$ une partie non vide et bornée de $\mathbb{R}$. On note $B=\left\{ \lvert x-y \lvert ,x,y \in A \right\} $.
+        \item On pose $\delta(A) = \sup B$. Prouver que $\delta(A) = \sup A - \sup B$ 
+    \end{enumerate}
+\end{exercise}
+
+
 \end{document}
